@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>后台模板</title>
+    <link rel="shortcut icon" href="static/admin/images/xxx.ico">
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+    <link rel="stylesheet" href="static/admin/css/main.css">
+    <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css" media="all">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+
+
+    <div class="layui-header">
+        <div class="layui-logo">项目名称</div>
+
+        <ul class="layui-nav layui-layout-left">
+
+        </ul>
+        <ul class="layui-nav layui-layout-right admin-nav-item" >
+            <li class="layui-nav-item"><a href="#" target="_blank">说明文档</a></li>
+            <li class="layui-nav-item admin-nav-item" >
+                <a href="javascript:;">
+                    <img src="static/admin/images/header.jpg" class="layui-nav-img">超级管理员
+                </a>
+                <dl class="layui-nav-child admin-nav-child">
+                    <dd><a href="/login_out">退出系统</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black admin-side">
+        <div class="layui-side-scroll" style="width: 100%">
+            <div class="admin-side-fold"><i class="fa fa-navicon" aria-hidden="true"></i></div>
+
+            <ul class="layui-nav layui-nav-tree"  lay-filter="nav-side">
+                <li class="layui-nav-item layui-nav-itemed layui-this">
+                    <a data-url="start.html" data-icon="fa-home" data-id="0" class="pointer">
+                        <i class="fa fa-home back_space1"></i><span>系统首页</span>
+                    </a>
+                </li>
+
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">
+                        <i class="fa fa-tasks"></i> &nbsp;&nbsp;<span>用户管理</span>
+                    </a>
+                    <dl class="layui-nav-child menu-nav_childs">
+                        <dd>
+                            <a data-url="/task/list" data-icon="&#xe715;" data-title="用户列表"  class="pointer" data-id="31">
+                                <i class="fa fa-object-ungroup"></i>  &nbsp;&nbsp;<span>用户列表</span>
+                            </a>
+                        </dd>
+
+                        <dd>
+                            <a data-url="/task/auditlist" data-icon="&#xe715;" data-title="用户审核"  class="pointer" data-id="42">
+                                <i class="fa fa-gavel"></i>  &nbsp;&nbsp;<span>用户审核</span>
+                            </a>
+                        </dd>
+
+                        <dd>
+                            <a data-url="/group/list" data-icon="&#xe715;" data-title="用户分组"  class="pointer" data-id="32">
+                                <i class="fa fa-object-group"></i>  &nbsp;&nbsp;<span>用户分组</span>
+                            </a>
+                        </dd>
+
+
+                    </dl>
+                </li>
+
+
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">
+                        <i class="fa fa-cogs"></i> &nbsp;&nbsp;<span>基本设置</span>
+                    </a>
+                    <dl class="layui-nav-child menu-nav_childs">
+
+                        <dd>
+                            <a data-url="/server/list" data-icon="&#xe715;" data-title="上传文件"  class="pointer" data-id="19">
+                                <i class="fa fa-cube"></i>  &nbsp;&nbsp;<span>上传管理</span>
+                            </a>
+                        </dd>
+
+
+                        <dd>
+                            <a data-url="/servergroup/list" data-icon="&#xe715;" data-title="敏感词维护"  class="pointer" data-id="18">
+                                <i class="fa fa-cubes"></i>  &nbsp;&nbsp;<span>敏感词维护</span>
+                            </a>
+                        </dd>
+
+                    </dl>
+                </li>
+
+
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">
+                        <i class="fa fa-id-card"></i> &nbsp;&nbsp;<span>权限管理</span>
+                    </a>
+                    <dl class="layui-nav-child menu-nav_childs">
+
+                        <dd>
+                            <a data-url="/admin/list" data-icon="&#xe715;" data-title="用户管理"  class="pointer" data-id="3">
+                                <i class="fa fa-user-o"></i>  &nbsp;&nbsp;<span>用户管理</span>
+                            </a>
+                        </dd>
+
+
+                        <dd>
+                            <a data-url="/role/list" data-icon="&#xe715;" data-title="角色管理"  class="pointer" data-id="4">
+                                <i class="fa fa-user-circle-o"></i>  &nbsp;&nbsp;<span>角色管理</span>
+                            </a>
+                        </dd>
+
+
+
+                        <dd>
+                            <a data-url="/auth/list" data-icon="&#xe715;" data-title="权限因子"  class="pointer" data-id="11">
+                                <i class="fa fa-list"></i>  &nbsp;&nbsp;<span>权限因子</span>
+                            </a>
+                        </dd>
+
+                    </dl>
+                </li>
+
+
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">
+                        <i class="gw fa fa-user-circle-o"></i> &nbsp;&nbsp;<span>个人中心</span>
+                    </a>
+                    <dl class="layui-nav-child menu-nav_childs">
+                        <dd>
+                            <a data-url="/user/edit" data-icon="&#xe715;" data-title="资料修改"  class="pointer" data-id="16">
+                                <i class="fa fa-edit"></i>  &nbsp;&nbsp;<span>资料修改</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body admin_body">
+        <div class="layui-tab admin-tab" lay-filter="main_tab">
+            <ul class="layui-tab-title admin_layui-tab-title">
+                <li lay-id="index.html" class="layui-this">系统首页</li>
+                <li lay-id="other.html">新增用户</li>
+            </ul>
+            <div class="layui-tab-content" style="padding: 0px;">
+                <div class="layui-tab-item layui-show admin_layui-tab-item">
+                    <div class="admin_content">
+
+
+                        <!-- 内容start -->
+                        <form class="layui-form" name="form1" action="">
+                            <div class="layui-form-item">
+
+                                <div class="layui-input-inline" style="width:200px;">
+                                    <input  type="text" class="layui-input" name="name" value="" id="patient" placeholder="姓名/手机号">
+                                </div>
+
+
+                                <div class="layui-input-inline" style="width:150px;">
+                                    <button style="float:left;" class="layui-btn">查询</button>
+                                </div>
+
+                            </div>
+                        </form>
+                        <table class="layui-table">
+                            <colgroup>
+                                <col width="150">
+                                <col width="200">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>用户名</th>
+                                <th>联系方式</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>巩文</td>
+                                <td>https://gwalker.cn</td>
+                                <td>您好，欢迎来访我的一亩三分地儿</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- 内容end -->
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer admin-footer">
+        作者 巩文 https://gwalker.cn
+    </div>
+</div>
+<script src="static/layui/layui.js"></script>
+<script src="static/admin/js/main.js"></script>
+</body>
+</html>
